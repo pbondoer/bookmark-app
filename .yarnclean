@@ -1,0 +1,39 @@
+# Fixing issues with types in some packages
+@types/react-native
+hookrouter/dist/index.d.ts
+hookrouter/dist/index.d.ts.map
+
+# Flow definitions
+*.flow
+
+# Coffeescript
+*.coffee
+
+# Tests
+__tests__
+test
+tests
+powered-test
+*.test.*
+*.spec.*
+
+# Code coverage
+coverage
+.nyc_output
+
+# Configuration
+appveyor.yml
+circle.yml
+codeship-services.yml
+codeship-steps.yml
+wercker.yml
+.tern-project
+.gitattributes
+.editorconfig
+.*ignore
+.eslintrc
+.jshintrc
+.flowconfig
+.documentup.json
+.yarn-metadata.json
+.travis.yml

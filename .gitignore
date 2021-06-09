@@ -1,0 +1,16 @@
+# Yarn stuff
+node_modules
+yarn-error.log
+
+# Parcel cache
+.cache
+
+# Eslint cache
+.eslintcache
+
+# Compiled bundles
+dist
+
+# Environment file
+.env.development
+.env.production

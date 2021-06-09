@@ -1,0 +1,73 @@
+{
+  "name": "bookmark-app",
+  "version": "1.0.0",
+  "main": "dist/index.html",
+  "author": "Pierre Bondoerffer <pierre@bondoer.fr>",
+  "license": "Unlicense",
+  "scripts": {
+    "clean": "rm -rf dist .cache",
+    "start": "parcel src/index.html",
+    "build": "npm run clean && cross-env NODE_ENV=production parcel build src/index.html --detailed-report",
+    "lint": "tsc --noEmit && eslint src/**/*.{ts,tsx}",
+    "prettier": "prettier --write src/**/*.{ts,tsx} *.md"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.13.10",
+    "@fontsource/open-sans": "^4.0.0",
+    "fuse.js": "^6.4.6",
+    "hookrouter": "^1.2.3",
+    "nanoid": "^3.1.23",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9",
+    "styled-components": "^5.2.1",
+    "styled-normalize": "^8.0.7",
+    "unistore": "^3.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "@types/hookrouter": "^2.2.5",
+    "@types/node": "^14.14.34",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.2",
+    "@types/styled-components": "^5.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "parcel": "^1.12.4",
+    "prettier": "^2.1.2",
+    "typescript": "^4.2.3"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --cache",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}
